@@ -10,7 +10,6 @@
 // y=x[0].innerText
 
 
-
 // let urlPage = document.getElementsByClassName("job-btn-container col-xs-12 col-sm-4")
 
 //DEBE MANDARSE SIN EL LET OJO
@@ -46,7 +45,6 @@ for (let i = 0; i < elementsPage.length ; i++) {
     jobs.push(info)
 }
 console.log(jobs)
-
 
 
 // class Jobs {
