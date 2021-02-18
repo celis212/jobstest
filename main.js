@@ -74,9 +74,31 @@ console.log(jobs)
 // document.querySelector("#fl-main-content").insertAdjacentHTML("beforebegin",mytable)
 
 
-let mytable = "<img style='margin: 1rem;' src='https://mx.talent.com/public/assets/img/talent_logo_purple_220.png' alt='logo of talent.com' /><section style='background-color: #000000; width: 100%; height: 5rem; margin-bottom: 1.5rem;'><p style='color: #ffffff; font-size: 2rem; font-weight: 500; line-height: 1.5rem; padding-top: 1.8rem; padding-left: 1.5rem;'>TEST: CESAR AUGUSTO CELIS MARIN</p></section><section style='width: 100%; height: 2.5rem; margin-bottom: 1.5rem;'><p style='color: #000000; font-size: 1.3rem; font-weight: 500; line-height: 1.5rem; padding-top: 0.5rem; padding-left: 1.5rem;'>JOBS</p></section><hr style='border-top: 0.5px solid #000000'><table style='padding-top: 1.5rem; color: #000000; display: flex; justify-content: center;'><tr style='border-style: solid none none none; border-width: 1px;'><th style='padding: 2rem;'>#</th><th>Job Title</th><th>Location</th><th>Job URL</th></tr>";
+let mytable = "<img style='margin: 1rem;' src='https://mx.talent.com/public/assets/img/talent_logo_purple_220.png' alt='logo of talent.com' />\
+<section style='background-color: #000000; width: 100%; height: 5rem; margin-bottom: 1.5rem;'>\
+    <p style='color: #ffffff; font-size: 2rem; font-weight: 500; line-height: 1.5rem; padding-top: 1.8rem; padding-left: 1.5rem;'>\TEST: CESAR AUGUSTO CELIS MARIN</p>\
+</section>\
+<section style='width: 100%; height: 2.5rem; margin-bottom: 1.5rem;'>\
+    <p style='color: #000000; font-size: 1.3rem; font-weight: 500; line-height: 1.5rem; padding-top: 0.5rem; padding-left: 1.5rem;'>JOBS</p>\
+</section>\
+<hr style='border-top: 0.5px solid #000000'>\
+<table style='padding-top: 1.5rem; color: #000000; display: flex; justify-content: center;'>\
+<tr style='border-style: solid none none none; border-width: 1px;'>\
+    <th style='padding: 2rem;'>#</th>\
+    <th>Job Title</th>\
+    <th>Location</th>\
+    <th>Job URL</th>\
+</tr>";
 jobs.forEach((job, index) => {
-  	mytable += `<tr style='border-style: solid none none none; border-width: 1px;'><td style='padding: 2rem;'>${index}</td><td style='table-layout: fixed; width: 40rem;'>${job.title}</td><td>${job.location}</td><td><a href="${job.url}">${job.url}</a></td></tr>`;
+    mytable += `\
+    <tr style='border-style: solid none none none; border-width: 1px;'>\
+        <td style='padding: 2rem;'>${index}</td>\
+        <td style='table-layout: fixed; width: 40rem;'>${job.title}</td>\
+        <td>${job.location}</td>\
+        <td>\
+            <a href="${job.url}">${job.url}</a>\
+        </td>\
+    </tr>`;
 }) 
 mytable += "</table>"
 document.querySelector("#fl-main-content").insertAdjacentHTML("beforebegin",mytable)
